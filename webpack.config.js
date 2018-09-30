@@ -41,7 +41,7 @@ module.exports = {
         extensions: ["*", ".js", ".jsx"]
     },
     entry: "./src/index.js",
-    mode: "production",
+    mode: "development",
     output: {
         path: __dirname + "/docs",
         filename: "bundle.js"

@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from "./App.scss";
+import Menu from '../../components/menu/Menu';
 
 class App extends React.Component{
     render(){
-        return <div className={styles.red}>Hello World!</div>;
+        return <React.Fragment>
+            <Menu subpages={["About", "Portfolio", "Bio", "Contact"]}/>
+        </React.Fragment>;
     }
 }
 
