@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from "./App.scss";
+import { CSSTransitionGroup } from 'react-transition-group';
 import PercentWheel from '../percentWheel/PercentWheel.jsx';
 
 class App extends React.Component{
