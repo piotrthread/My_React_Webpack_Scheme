@@ -7,17 +7,6 @@ svg{
  }
 }
 
-path{
-    fill:none;
-    stroke:lightgray;
-    stroke-width:9px;
-}
-.percentWheel{
-    stroke: url(#gradient);
-    transform-origin: 50% 50%;
-    transform:rotate(90deg);
-    stroke-dasharray: 472;
-}
 p{
     width:100px;
     text-align: center;
@@ -26,4 +15,27 @@ p{
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
+
+path{
+    fill:none;
+    stroke:lightgray;
+    stroke-width:9px;
+}
+
+.percentWheel{
+    stroke: url(#gradient);
+    transform-origin: 50% 50%;
+    transform:rotate(90deg);
+    stroke-dasharray: 472;
+}
+
+.percentWheel-appear {
+    opacity: 0.01;
+  }
+  
+  .percentWheel-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
+
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import css from './PercentWheel.scss';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 class PercentWheel extends React.Component{
     render(){
@@ -8,6 +9,13 @@ class PercentWheel extends React.Component{
             strokeDashoffset: percentValue,
         }
         return<React.Fragment>
+            <CSSTransitionGroup
+      transitionName="percentWheel"
+      transitionAppear={true}
+      transitionAppearTimeout={500}
+      transitionEnter={false}
+      transitionLeave={false}>
+      
             <svg viewBox="0 0 200 200">
             <defs>
                 <linearGradient id="gradient">
@@ -20,6 +28,7 @@ class PercentWheel extends React.Component{
         <path d=" M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0 " />
         <path className={css.percentWheel} style={styles} d=" M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0 " />
     </svg>
+    </CSSTransitionGroup>
     <p>{this.props.text}</p>
         </React.Fragment>;
     }
