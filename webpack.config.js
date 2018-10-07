@@ -1,8 +1,9 @@
 const webpack = require('webpack');
 
 module.exports = {
-
+   
     module:{
+        
         rules: [
             {
                 test: /\.jsx?$/,
@@ -22,7 +23,7 @@ module.exports = {
                         loader: "css-loader",
                         options: {
                             modules:true,
-                            localIdentName: "[local]_[hash]"
+                            localIdentName: "[name]"
                         }
                     },
                     {
